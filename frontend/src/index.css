@@ -1,0 +1,52 @@
+/* global.css */
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+  background-color: #000 !important; /* Set the body background to black */
+}
+
+#body-content {
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+.bg-content {
+  background-color: #353232 !important;
+  border-radius: 2% !important;
+}
+
+/* Ensure the navbar stretches across the entire width */
+.navbar {
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  /* Remove the background-color property if you don't want the navbar to be black */
+}
+
+/* Override padding for the container within the navbar */
+.navbar .container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+/* Target the brand/logo specifically */
+.navbar-brand {
+  padding-left: 1rem; /* Adjust the value as needed */
+}
+
+/* Adjust the space between nav items */
+.nav-link {
+  margin-right: 1.5rem; /* Increase the margin as needed */
+  /* Add color styling if needed for nav links */
+}
+
+/* Ensure the nav collapses properly on smaller screens */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+/* No need to repeat the body padding style, it's already declared above */
