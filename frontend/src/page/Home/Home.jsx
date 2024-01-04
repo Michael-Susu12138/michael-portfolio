@@ -1,6 +1,7 @@
-import "./Home.css";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navigation from "../../components/Navigation/Navigation";
+import Particles from "react-tsparticles";
+import Typed from "typed.js";
 import {
   FaGithub,
   FaGamepad,
@@ -8,14 +9,58 @@ import {
   FaLinkedin,
   FaSlack,
 } from "react-icons/fa";
-import OfficialImage from "/assets/official-removebg-preview.png"; // Adjust the path to where you have your image
+import OfficialImage from "/assets/official-removebg-preview.png";
+import "./Home.css";
 
 const Home = () => {
+  const typedSpan = useRef(null);
+  const [initParticles, setInitParticles] = useState(false);
+
+  useEffect(() => {
+    if (typedSpan.current) {
+      const typed = new Typed(typedSpan.current, {
+        strings: ["Websites", "Mobile Applications", "Games"],
+        typeSpeed: 60,
+        backSpeed: 70,
+        loop: true,
+      });
+
+      return () => {
+        typed.destroy();
+      };
+    }
+  }, []);
+
+  const particlesOptions = {
+    particles: {
+      number: {
+        value: 50,
+      },
+      color: {
+        value: "#ffffff",
+      },
+      opacity: {
+        value: 0.5,
+      },
+      size: {
+        value: 3,
+      },
+      move: {
+        speed: 3,
+      },
+      line_linked: {
+        enable: true,
+        color: "#ffffff",
+      },
+    },
+  };
+
   return (
     <div
-      style={{ height: "100vh", width: "100vw" }}
       className="p-0 m-0 border-0"
+      style={{ height: "100vh", width: "100vw" }}
     >
+      <Particles id="tsparticles" options={particlesOptions} />
       <Navigation />
       <div
         id="body-content"
@@ -29,7 +74,10 @@ const Home = () => {
             <h3>
               I am a <span>Software Engineer</span>
             </h3>
-            <h4>I design and develop</h4>
+            <h4>
+              I design and develop{" "}
+              <span ref={typedSpan} className="words"></span>
+            </h4>
             <ul className="list-inline">
               <li className="list-inline-item">
                 <a href="https://github.com">
