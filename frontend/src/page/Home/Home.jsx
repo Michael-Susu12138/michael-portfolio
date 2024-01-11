@@ -54,30 +54,30 @@ const Home = () => {
             </h4>
             <ul className="list-inline">
               <li className="list-inline-item">
-                <a href="https://github.com">
+                <a href="https://github.com/Michael-Susu12138">
                   <FaGithub />
                 </a>
               </li>
               <li className="list-inline-item">
-                <a href="https://itch.io">
+                <a href="https://michael-chen1.itch.io/">
                   <FaGamepad />
                 </a>
               </li>
-              <li className="list-inline-item">
+              {/* <li className="list-inline-item">
                 <a href="https://instagram.com">
                   <FaInstagram />
                 </a>
-              </li>
+              </li> */}
               <li className="list-inline-item">
-                <a href="https://linkedin.com">
+                <a href="https://www.linkedin.com/in/yifang-chen-9ab043138/">
                   <FaLinkedin />
                 </a>
               </li>
-              <li className="list-inline-item">
+              {/* <li className="list-inline-item">
                 <a href="https://slack.com">
                   <FaSlack />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="col-md-6">
