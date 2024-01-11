@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import Navigation from "../../components/Navigation/Navigation";
-import Particles from "react-tsparticles";
 import Typed from "typed.js";
 import {
   FaGithub,
@@ -11,11 +10,10 @@ import {
 } from "react-icons/fa";
 import OfficialImage from "/assets/official-removebg-preview.png";
 import "./Home.css";
+import ParticlesComponent from "../../components/ParticlesComponent/ParticlesComponent";
 
 const Home = () => {
   const typedSpan = useRef(null);
-  const [initParticles, setInitParticles] = useState(false);
-
   useEffect(() => {
     if (typedSpan.current) {
       const typed = new Typed(typedSpan.current, {
@@ -31,36 +29,12 @@ const Home = () => {
     }
   }, []);
 
-  const particlesOptions = {
-    particles: {
-      number: {
-        value: 50,
-      },
-      color: {
-        value: "#ffffff",
-      },
-      opacity: {
-        value: 0.5,
-      },
-      size: {
-        value: 3,
-      },
-      move: {
-        speed: 3,
-      },
-      line_linked: {
-        enable: true,
-        color: "#ffffff",
-      },
-    },
-  };
-
   return (
     <div
       className="p-0 m-0 border-0"
       style={{ height: "100vh", width: "100vw" }}
     >
-      <Particles id="tsparticles" options={particlesOptions} />
+      <ParticlesComponent />
       <Navigation />
       <div
         id="body-content"
