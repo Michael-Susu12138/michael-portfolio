@@ -19,14 +19,12 @@ function Navigation() {
             <Nav.Link as={NavLink} to="/" exact>
               Home
             </Nav.Link>
-            <NavDropdown title="About Me" id="basic-nav-dropdown">
-              <NavDropdown.Item as={NavLink} to="/skills">
-                Experience/Skills
-              </NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to="/hobbies">
-                Hobbies
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link as={NavLink} to="/aboutme" exact>
+              About Me
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/experience" exact>
+              Experience/Skills
+            </Nav.Link>
             <Nav.Link as={NavLink} to="/learnmore">
               Learn More
             </Nav.Link>

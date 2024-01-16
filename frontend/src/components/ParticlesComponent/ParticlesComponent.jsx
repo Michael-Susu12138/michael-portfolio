@@ -16,7 +16,7 @@ function ParticlesComponent() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="Particle">
       {init && <Particles options={particlesOptions} />}
     </div>
   );
