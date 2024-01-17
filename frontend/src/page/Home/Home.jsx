@@ -11,6 +11,7 @@ import {
 import OfficialImage from "/assets/official-removebg-preview.png";
 import "./Home.css";
 import ParticlesComponent from "../../components/ParticlesComponent/ParticlesComponent";
+import ButtonIcon from "../../components/ButtonIcon/ButtonIcon";
 
 const Home = () => {
   const typedSpan = useRef(null);
@@ -59,9 +60,10 @@ const Home = () => {
                 </a>
               </li>
               <li className="list-inline-item">
-                <a href="https://michael-chen1.itch.io/">
+                {/* <a href="https://michael-chen1.itch.io/">
                   <FaGamepad />
-                </a>
+                </a> */}
+                <ButtonIcon></ButtonIcon>
               </li>
               {/* <li className="list-inline-item">
                 <a href="https://instagram.com">
