@@ -4,7 +4,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #000 !important; /* Set the body background to black */
+  /* background-color: black !important; Set the body background to black */
+  /* background-color: #669bbc !important; */
 }
 
 #body-content {
