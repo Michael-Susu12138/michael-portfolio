@@ -1,20 +1,77 @@
 /* Sidebar.css */
 
 .sidebar {
-  width: 250px;
-  background-color: #000000;
+  width: 400px;
+  /* width: 20%; */
+  background-color: #1E1E1F;
   color: white;
   padding: 20px;
-  height: 100vh;
+  /* Increased padding for content */
+  height: 50%;
   margin: 30px;
-
   border-radius: 15px;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(128, 128, 128, 0.5);
+  /* Adjusted shadow */
+  overflow: hidden;
+  /* Ensures no content spills outside the border-radius */
+}
+
+/* Adjustments for animated gradient border to fit new padding */
+.sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  /* Adjust border thickness here */
+  border-radius: 15px;
+  /* Match sidebar's border-radius */
+  background: linear-gradient(45deg, #000, #fff, #000),
+    linear-gradient(to bottom, #1E1E1F, #1E1E1F);
+  /* Fallback color */
+  background-clip: padding-box, border-box;
+  /* Clips the background */
+  z-index: -1;
+  animation: moveGradient 4s linear infinite;
+}
+
+/* Ensuring the content is centrally aligned */
+.profile,
+.nav-menu,
+.contact-info,
+.social-media {
+  padding: 0 10px;
+  /* Adjust based on preference */
 }
 
 .profile {
   text-align: center;
   margin-bottom: 20px;
+  padding: 10px;
+  /* Reduced padding */
 }
+
+.profile h1 {
+  font-size: 1.5rem;
+  /* Adjust based on your preference */
+  /* For a more responsive approach: */
+  font-size: calc(1rem + 1vw);
+
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* This will add "..." at the end if the text overflows */
+  margin: 0;
+  /* Reduce or remove margins */
+
+
+}
+
+
+
 
 .profile .avatar {
   width: 80px;
@@ -29,6 +86,53 @@
   height: auto;
 }
 
+.profile p {
+  font-size: 0.85rem;
+  /* Smaller text for the subtitle */
+  color: #ccc;
+  /* Lighter color for less emphasis */
+  text-align: center;
+  /* Centering the subtitle */
+}
+
+/* Styling the navigation menu */
+.nav-menu a {
+  color: white;
+  /* Regular link color */
+  padding: 0.5rem 1rem;
+  /* Padding for better touch area */
+  display: block;
+  /* Make the links full-width for easier navigation */
+  transition: color 0.3s ease, background-color 0.3s ease;
+  /* Smooth transition for hover effects */
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+  color: #e1e5ea;
+  /* Lighter color on hover/focus */
+  background-color: #333;
+  /* Slightly darker background on hover/focus */
+  text-decoration: none;
+  /* Remove underline effect */
+  border-radius: 5px;
+  /* Optional: rounded corners on hover/focus */
+}
+
+/* Additional styling for icons if needed */
+.nav-menu a .icon {
+  margin-right: 8px;
+  /* Space between icon and text */
+  width: 16px;
+  /* Set a fixed width for alignment */
+  text-align: center;
+  /* Center the icons */
+  display: inline-block;
+  /* Ensure icons align with text */
+}
+
+
+
 .nav-menu ul {
   list-style: none;
   padding: 0;
@@ -41,7 +145,8 @@
 
 .nav-menu li a {
   text-decoration: none;
-  color: white; /* Adjust color as needed */
+  color: white;
+  /* Adjust color as needed */
   display: flex;
   align-items: center;
 }
@@ -53,7 +158,8 @@
 /* Highlight the active link */
 .nav-menu li a.active {
   font-weight: bold;
-  color: #780000; /* Adjust active link color as needed */
+  color: #780000;
+  /* Adjust active link color as needed */
 }
 
 .contact-info li {
@@ -64,7 +170,8 @@
 
 .contact-info li .icon {
   margin-right: 10px;
-  width: 20px; /* Adjust the size if necessary */
+  width: 20px;
+  /* Adjust the size if necessary */
 }
 
 .social-media {
@@ -75,5 +182,6 @@
 
 .social-media .icon {
   margin-right: 10px;
-  font-size: 24px; /* Adjust icon size if necessary */
+  font-size: 24px;
+  /* Adjust icon size if necessary */
 }
