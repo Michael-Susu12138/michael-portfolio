@@ -1,12 +1,10 @@
-/* global.css */
-
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: rgb(37, 36, 36) !important;
-  /* Set the body background to black */
-  /* background-color: #669bbc !important; */
+  background-color: #121212 !important; /* Setting a unified background color */
+  /* You can comment/uncomment the background-color below as per your design needs */
+  /* background-color: rgb(37, 36, 36) !important; */
 }
 
 #body-content {
@@ -32,14 +30,17 @@ body {
   padding-right: 0;
   padding-left: 0;
 }
+
 /* Target the brand/logo specifically */
 .navbar-brand {
-  padding-left: 1rem; /* Adjust the value as needed */
+  padding-left: 1rem;
+  /* Adjust the value as needed */
 }
 
 /* Adjust the space between nav items */
 .nav-link {
-  margin-right: 1.5rem; /* Increase the margin as needed */
+  margin-right: 1.5rem;
+  /* Increase the margin as needed */
   /* Add color styling if needed for nav links */
 }
 
@@ -50,5 +51,3 @@ body {
     margin-left: -15px;
   }
 }
-
-/* No need to repeat the body padding style, it's already declared above */

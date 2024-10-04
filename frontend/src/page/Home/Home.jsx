@@ -1,7 +1,7 @@
-// Home.js
-
 import React from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import ParticlesComponent from "../../components/ParticlesComponent/ParticlesComponent"; // Particle component for background effect
+import MyCard from "../../components/Card/MyCard"; // Custom card component
 import PaperList from "../../components/PaperList/PaperList";
 import ProfileImage from "/assets/selfie.jpg"; // Image of yourself
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className="app-container">
+      <ParticlesComponent />
       <Sidebar />
       <main className="main-content">
         <section className="about-section">
@@ -74,7 +75,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         <section className="education-section">
           <h2>Education</h2>
           <ul>
@@ -88,11 +88,11 @@ const Home = () => {
             </li>
           </ul>
         </section>
-
         <section className="paper-section">
           <h2>Publications</h2>
           <PaperList />
         </section>
+        <MyCard /> {/* Your custom card component */}
       </main>
     </div>
   );
