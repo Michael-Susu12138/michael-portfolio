@@ -92,7 +92,6 @@ const Home = () => {
           <h2>Publications</h2>
           <PaperList />
         </section>
-        <MyCard /> {/* Your custom card component */}
       </main>
     </div>
   );
