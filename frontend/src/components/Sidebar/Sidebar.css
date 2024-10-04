@@ -2,26 +2,29 @@
 
 .sidebar {
   width: 250px;
-  background-color: #000000;
-  color: white;
+  background-color: #1e1e1e; /* Matches the background of the main content */
+  color: #f0f0f0; /* Lighter text color for readability */
   padding: 20px;
-  height: 100vh;
+  height: 130vh;
   margin: 30px;
-
   border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  border: 1px solid #333; /* Subtle border for separation */
 }
 
+/* Profile Section */
 .profile {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .profile .avatar {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 10px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
   border-radius: 50%;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Slight shadow for the avatar */
 }
 
 .profile .avatar img {
@@ -29,6 +32,19 @@
   height: auto;
 }
 
+/* Profile Text Styling */
+.profile h2 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  color: #fdf0d5; /* Slightly off-white for contrast */
+}
+
+.profile p {
+  font-size: 1em;
+  color: #cccccc; /* Light gray for subtitle */
+}
+
+/* Navigation Menu */
 .nav-menu ul {
   list-style: none;
   padding: 0;
@@ -39,23 +55,36 @@
   margin-bottom: 20px;
 }
 
+/* Navigation Links */
 .nav-menu li a {
   text-decoration: none;
-  color: white; /* Adjust color as needed */
+  color: #f0f0f0; /* Matches text color in the main content */
   display: flex;
   align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Icon Styling */
 .nav-menu li a .icon {
   margin-right: 10px;
+  font-size: 1.2em; /* Larger icon for better visibility */
 }
 
-/* Highlight the active link */
+/* Hover Effects */
+.nav-menu li a:hover {
+  background-color: #333;
+  color: #fdf0d5; /* Hover text color */
+}
+
 .nav-menu li a.active {
   font-weight: bold;
-  color: #780000; /* Adjust active link color as needed */
+  color: #780000; /* Accent color for active links */
+  background-color: #2a2a2a; /* Slight background change for active links */
 }
 
+/* Contact Info Styling */
 .contact-info li {
   display: flex;
   align-items: center;
@@ -76,4 +105,26 @@
 .social-media .icon {
   margin-right: 10px;
   font-size: 24px; /* Adjust icon size if necessary */
+}
+
+.nav-menu li a.active {
+  font-weight: bold;
+  color: #780000; /* Accent color for active link */
+}
+/* Sidebar.css */
+
+/* Existing sidebar styles */
+.sidebar {
+  width: 250px;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  padding: 20px;
+  height: 100vh;
+  margin: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures the bottom section stays at the bottom */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
 }

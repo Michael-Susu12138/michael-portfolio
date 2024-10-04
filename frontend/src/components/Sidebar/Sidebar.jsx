@@ -1,15 +1,19 @@
+// Sidebar.js
+
 import React from "react";
-import { NavLink } from "react-router-dom"; // Assuming you're using react-router for navigation
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
-  faUser,
-  faFolderOpen,
+  faUserGraduate,
+  faFileAlt,
   faEnvelope,
+  faFile,
   faBlog,
 } from "@fortawesome/free-solid-svg-icons";
+import { faGoogle, faLinkedin } from "@fortawesome/free-brands-svg-icons"; // For external links
 
-import OfficialImage from "/assets/official-removebg-preview.png";
+import OfficialImage from "/assets/official-removebg-preview.png"; // Corrected path
 import "./Sidebar.css";
 
 const Sidebar = () => {
@@ -17,39 +21,63 @@ const Sidebar = () => {
     <aside className="sidebar">
       <div className="profile">
         <div className="avatar">
-          <img src={OfficialImage} alt="Yifang(Michael) Chen" />
+          <img src={OfficialImage} alt="Yifang 'Michael' Chen" />
         </div>
-        <h1>Yifang(Michael) Chen</h1>
-        <p>Software Engineer</p>
+        <h2>Yifang "Michael" Chen</h2> {/* Reduced name size */}
+        <p>Student Researcher</p>
       </div>
       <nav className="nav-menu">
         <ul>
           <li>
-            <NavLink to="/" activeClassName="active">
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               <FontAwesomeIcon icon={faHome} className="icon" />
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" activeClassName="active">
-              <FontAwesomeIcon icon={faUser} className="icon" />
-              About
+            <NavLink
+              to="/research"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              <FontAwesomeIcon icon={faUserGraduate} className="icon" />
+              Research
             </NavLink>
           </li>
           <li>
-            <NavLink to="/portfolio" activeClassName="active">
-              <FontAwesomeIcon icon={faFolderOpen} className="icon" />
-              Portfolio
+            <NavLink
+              to="/publications"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              <FontAwesomeIcon icon={faFileAlt} className="icon" />
+              Publications
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" activeClassName="active">
+            <NavLink
+              to="/cv"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              <FontAwesomeIcon icon={faFile} className="icon" />
+              CV
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               <FontAwesomeIcon icon={faEnvelope} className="icon" />
               Contact
             </NavLink>
           </li>
           <li>
-            <NavLink to="/blog" activeClassName="active">
+            <NavLink
+              to="/blog"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               <FontAwesomeIcon icon={faBlog} className="icon" />
               Blog
             </NavLink>
