@@ -1,11 +1,15 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import ParticlesComponent from "../../components/ParticlesComponent/ParticlesComponent"; // Particle component for background effect
-import MyCard from "../../components/Card/MyCard"; // Custom card component
+import ParticlesComponent from "../../components/ParticlesComponent/ParticlesComponent";
+import MyCard from "../../components/Card/MyCard";
 import PaperList from "../../components/PaperList/PaperList";
 import ProfileImage from "/assets/selfie.jpg"; // Image of yourself
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGoogle,
+  faLinkedin,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 import { faFileAlt } from "@fortawesome/free-solid-svg-icons"; // For DBLP and OpenReview
 import "./Home.css";
 
@@ -68,6 +72,17 @@ const Home = () => {
                   </a>
                   <span>LinkedIn</span>
                 </div>
+                <div className="social-item">
+                  <a
+                    href="https://github.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="GitHub"
+                  >
+                    <FontAwesomeIcon icon={faGithub} className="icon" />
+                  </a>
+                  <span>GitHub</span>
+                </div>
               </div>
             </div>
             <div className="about-image">
@@ -89,7 +104,7 @@ const Home = () => {
           </ul>
         </section>
         <section className="paper-section">
-          <h2>Publications</h2>
+          <h2>Research Papers</h2>
           <PaperList />
         </section>
       </main>

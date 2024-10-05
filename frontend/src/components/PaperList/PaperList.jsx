@@ -6,20 +6,28 @@ import Paper from "../Paper/Paper"; // Import the Paper component
 const PaperList = () => {
   const papers = [
     {
-      title: "Deep Learning Techniques for 3D Vision in Medical Imaging",
-      authors: "Yifang 'Michael' Chen, John Doe, Jane Smith",
-      publication: "International Conference on Computer Vision",
-      year: 2023,
-      link: "https://example.com/paper1",
+      title: "A Nearly Optimal Size Coreset Algorithm with Nearly Linear Time",
+      authors: "Bo Chen, Yifang Chen, Yichuan Deng, Zhao Song, Yitan Wang ",
+      submission: "AISTATS2025",
+      //   year: 2024,
+      link: "https://arxiv.org/pdf/2210.08361",
     },
     {
-      title: "Data Mining Applications in Healthcare",
-      authors: "Yifang 'Michael' Chen, Alan Turing, Ada Lovelace",
-      publication: "Journal of Data Science",
-      year: 2024,
-      link: "https://example.com/paper2",
+      title: "In-Context Learning for Nonlinear Regression",
+      authors: "Yifang Chen, Yeqi Gao, Jiangxuan Long, Zhao Song, Shenghao Xie",
+      submission: "AISTATS2025",
+      //   year: 2024,
+      //   link: "",
     },
-    // Add more papers as needed
+    {
+      title:
+        "A Mathematical Abstraction for Balancing the Trade-off Between Creativity and Reality in Large Language Models",
+      authors:
+        "Yifang Chen, Jiangxuan Long, Ritwik Sinha, Zhao Song, Tianyi Zhou",
+      submission: "AISTATS2025",
+      //   year: 2024,
+      link: "https://arxiv.org/pdf/2306.02295",
+    },
   ];
 
   return (
@@ -29,7 +37,7 @@ const PaperList = () => {
           key={index}
           title={paper.title}
           authors={paper.authors}
-          publication={paper.publication}
+          submission={paper.submission}
           year={paper.year}
           link={paper.link}
         />

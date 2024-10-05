@@ -1,7 +1,7 @@
 /* Ensure the app-container uses flexbox layout */
 .app-container {
   display: flex;
-  flex-direction: row; /* Ensure sidebar and main content align horizontally */
+  flex-direction: row; /* Align sidebar and main content horizontally */
   min-height: 100vh; /* Full height for the container */
 }
 
@@ -23,27 +23,30 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border: 1px solid #333;
   overflow: auto; /* Enable scrolling if content is too long */
-  height: 100vh; /* Ensure the content adapts to the content size */
+  height: 100vh;
+  /* min-height: calc(
+    100vh - 60px
+  ); Ensure the content adapts to the viewport height */
 }
 
 /* About section layout */
 .about-content {
   display: flex;
-  align-items: flex-start; /* Align text and image at the top */
+  align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: wrap; /* Wrap content to prevent overflow */
+  flex-wrap: wrap;
 }
 
 .about-text {
-  flex: 1; /* Take remaining space on the left */
+  flex: 1;
 }
 
 .about-text h2 {
   font-size: 2.5em;
   color: #fdf0d5;
   margin-bottom: 10px;
-  display: inline-block; /* Ensures the border only spans the width of the text */
-  border-bottom: 2px solid #780000; /* Red divider line under name */
+  display: inline-block;
+  border-bottom: 2px solid #780000;
   padding-bottom: 5px;
 }
 
@@ -55,39 +58,52 @@
 
 /* Profile image styling */
 .about-image {
-  margin-left: 40px; /* Space between text and image */
+  margin-left: 40px;
 }
 
 .about-image img {
-  width: 300px; /* Bigger image size */
+  width: 300px;
   height: auto;
-  border-radius: 10px; /* Rounded corners for the image */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Social links */
+/* Social links - grid layout for two rows */
 .social-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Space between items */
   margin-top: 20px;
 }
 
-.social-links a {
+.social-item {
+  text-align: center;
+}
+
+.social-item a {
+  display: block;
   color: #f0f0f0;
-  margin-right: 15px;
-  font-size: 1.8em;
+  font-size: 2em;
   transition: color 0.3s ease;
 }
 
-.social-links a:hover {
+.social-item a:hover {
   color: #780000;
 }
 
-/* Section titles and shorter red dividers */
+.social-item span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #f0f0f0;
+}
+
+/* Section titles */
 h2 {
   font-size: 1.8em;
   margin-bottom: 10px;
   color: #fdf0d5;
-  display: inline-block; /* Border only spans the width of the text */
-  border-bottom: 2px solid #780000; /* Red divider under section titles */
+  border-bottom: 2px solid #780000;
   padding-bottom: 5px;
 }
 
@@ -112,8 +128,8 @@ h2 {
 }
 
 .education-section .date {
-  margin-right: 0px;
-  font-size: 0.9em; /* Smaller size for date */
-  color: #cccccc; /* Light gray color for date */
-  font-style: italic; /* Italic style to differentiate the date */
+  margin-right: 0;
+  font-size: 0.9em;
+  color: #cccccc;
+  font-style: italic;
 }

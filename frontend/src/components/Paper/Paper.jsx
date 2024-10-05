@@ -1,7 +1,8 @@
 import React from "react";
 import "./Paper.css";
 
-const Paper = ({ title, authors, publication, year, link }) => {
+const Paper = ({ title, authors, submission, year, link }) => {
+  console.log(submission);
   return (
     <div className="paper">
       <h3>{title}</h3>
@@ -9,8 +10,8 @@ const Paper = ({ title, authors, publication, year, link }) => {
         <strong>Authors:</strong> {authors}
       </p>
       <p>
-        <strong>Published in:</strong> {publication}{" "}
-        <span className="year">({year})</span>
+        <strong>Submitted to:</strong> {submission}{" "}
+        {/* <span className="year">({year})</span> */}
       </p>
       {link && (
         <p>
